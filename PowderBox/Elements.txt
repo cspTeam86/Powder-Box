@@ -1,9 +1,36 @@
 // comment <--
 //
+// Input Structure:
+// Number
+// Symbol
+// Density as a gas
+// Density as a Liquid
+// Density as a Solid
+// Melting Point (Kelvin)
+// Boiling Point (Kelvin)
+//
+// Notes:
+// Celsius to Kelvin is +274.2
+//
+// List of tags:
+// <Number>
+// <Symbol>
+// <DensityG>
+// <DensityL>
+// <DensityS>
+// <MeltingPoint>
+// <BoilingPoint>
+// 
+// 
 // Hydrogen //
 //
 <Number>1</Number>
 <Symbol>H</Symbol>
+<DensityG></DensityG>
+<DensityL></DensityL>
+<DensityS></DensityS>
+<MeltingPoint>14</MeltingPoint>
+<BoilingPoint>20.3</BoilingPoint>
 <finish>
 //
 // Helium //
