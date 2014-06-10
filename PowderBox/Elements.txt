@@ -1,0 +1,73 @@
+// comment <--
+//
+// Hydrogen //
+//
+<Number>1</Number>
+<Symbol>H</Symbol>
+<finish>
+//
+// Helium //
+//
+<Number>2</Number>
+<Symbol>He</Symbol>
+<finish>
+//
+// Lithium
+//
+<Number>3</Number>
+<Symbol>Li</Symbol>
+<finish>
+//
+// Beryllium
+//
+<Number>4</Number>
+<Symbol>Be</Symbol>
+<finish>
+//
+// Boron
+//
+<Number>5</Number>
+<Symbol>B</Symbol>
+<finish>
+//
+// Carbon
+//
+<Number>6</Number>
+<Symbol>C</Symbol>
+<finish>
+//
+// Nitrogen
+//
+<Number>7</Number>
+<Symbol>N</Symbol>
+<finish>
+//
+// Oxygen
+//
+<Number>8</Number>
+<Symbol>O</Symbol>
+<finish>
+//
+// Fluorine
+//
+<Number>9</Number>
+<Symbol>F</Symbol>
+<finish>
+//
+// Neon
+//
+<Number>10</Number>
+<Symbol>Ne</Symbol>
+<finish>
+//
+// Sodium
+//
+<Number>11</Number>
+<Symbol>Na</Symbol>
+<finish>
+//
+// Magnesium
+//
+<Number>12</Number>
+<Symbol>Mg</Symbol>
+<finish>

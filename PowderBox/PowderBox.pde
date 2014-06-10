@@ -65,4 +65,3 @@ void initFlags() {
   noStroke();
   smooth();
 }
-
