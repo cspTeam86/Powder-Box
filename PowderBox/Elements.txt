@@ -31,7 +31,7 @@
 //
 <Number>1</Number>
 <Symbol>H</Symbol>
-<Color>FFEBF4FA</Color>
+<Color>FF99CCFF</Color>
 <DensityG></DensityG>
 <DensityL></DensityL>
 <DensityS></DensityS>
@@ -115,7 +115,7 @@
 //
 <Number>8</Number>
 <Symbol>O</Symbol>
-<Color>FFADDFFF</Color>
+<Color>FF7F76FF</Color>
 <DensityG></DensityG>
 <DensityL></DensityL>
 <DensityS></DensityS>
