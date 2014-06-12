@@ -1,5 +1,7 @@
 // comment <--
 //
+// IMPORTANT: Compounds must ALWAYS come after Elements
+//
 // Input Structure:
 // Number
 // Symbol
@@ -13,6 +15,7 @@
 // Celsius to Kelvin is +274.2
 //
 // List of tags:
+// <Element>
 // <Number>
 // <Symbol>
 // <DensityG>
@@ -147,3 +150,10 @@
 <Number>12</Number>
 <Symbol>Mg</Symbol>
 <finish>
+//            //
+// Compounds! //
+//            //
+//--------------
+//
+// Di-hydrogen
+//
