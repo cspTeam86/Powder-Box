@@ -16,6 +16,7 @@ class fileIO {
     // Data to go in the elements
     int Number = 0;
     String Symbol = null;
+    color Color = color(0,0,0);
     float Density_G = 0;
     float Density_L = 0;
     float Density_S = 0;
@@ -38,9 +39,10 @@ class fileIO {
       
       if(match(line, "//") == null) {
         if(match(line, "<finish>") != null) {
-          R.add(new Element(Number, 
-                            Symbol, 
-                            Density_G, 
+          R.add(new Element(Number,
+                            Symbol,
+                            Color,
+                            Density_G,
                             Density_L,
                             Density_S,
                             MeltingPoint,
@@ -51,7 +53,6 @@ class fileIO {
         }else {
           // If statements for all the tags that store our data
           // AGG!
-          
           // Atomic number //
           tag = findTag(line, "Number");
           if(tag != null) {
@@ -61,6 +62,21 @@ class fileIO {
           tag = findTag(line, "Symbol");
           if(tag != null) {
             Symbol = tag;
+          }
+          // Color //
+          tag = findTag(line, "Color");
+          if(tag != null) {
+            Color = unhex(tag);
+          }
+          // Boiling Point //
+          tag = findTag(line, "BoilingPoint");
+          if(tag != null) {
+            BoilingPoint = float(tag);
+          }
+          // Melting Point //
+          tag = findTag(line, "MeltingPoint");
+          if(tag != null) {
+            MeltingPoint = float(tag);
           }
           // Density as a Gas //
           

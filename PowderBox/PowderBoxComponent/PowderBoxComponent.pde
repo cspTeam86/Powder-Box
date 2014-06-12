@@ -1,9 +1,3 @@
-/*
-  
-  
-  
-*/
-
 // Imports //
 import java.util.Collections;
 import controlP5.*;
@@ -13,9 +7,10 @@ import controlP5.*;
 //
 color BC = #9D9CD1; // Background color: Very light blue
 
-int selectedElement = 1; // Element to be created when the mouse is pressed
+int selectedElement = 4; // Element to be created when the mouse is pressed
 
 ArrayList<Element> ElementData = new ArrayList<Element>();
+ArrayList<Button> buttons = new ArrayList<Button>();
 
 // Indexes //
 int i = 0;
@@ -62,21 +57,27 @@ void setup() {
 void draw() {
   // Daylan Draw //
   background(BC);
-  
-  // draw dividers //
-  stroke(0);
-  line(500, 0, 500, height);
-
+  fill(0);
+  rect(0,0,ParticleMap.w*displayScale,ParticleMap.h*displayScale);
   // test text //
-  text("Main Window", 250, 250);
-  text("SideBar", 650, 250);
+  //text("Main Window", 250, 250);
+  //text("SideBar", 650, 250);
   
   // Andrew Draw //
-  /*
-  if(mousePressed == true && mouseButton == CENTER) {
-   ParticleMap.removeParticle(ceil(constrain(mouseX/displayScale,0,ParticleMap.w-1)),ceil(constrain(mouseY/displayScale,0,ParticleMap.w-1)));
-   }
-   */
+  
+  selectedElement = 0;
+  for(int n = 0; n < buttons.size(); n++) {
+    Button button = buttons.get(n);
+    if(button.getBooleanValue() == true) {
+      selectedElement = n+1;
+    }
+  }
+  
+  // Create Particles of the selected type when the mouse is pressed
+  if(mousePressed == true && mouseX < ParticleMap.w*displayScale) {
+    createParticle(ceil(mouseX/displayScale),ceil(mouseY/displayScale), selectedElement);
+  }
+  
   for (int y = ParticleMap.h; y >= 0; y--) {
     for (int x = 0; x < ParticleMap.w; x++) {
       Particle part = ParticleMap.getParticle(x, y);
@@ -93,22 +94,9 @@ void draw() {
     p.display();
   }
   
-  if (mousePressed == true && ParticleMap.isFree(ceil(constrain(mouseX/displayScale, 0, ParticleMap.w-1)), ceil(constrain(mouseY/displayScale, 0, ParticleMap.w-1))) == true) {
-    if (mouseButton == LEFT) {
-      ParticleMap.createParticle(LIQUID, color(0, 255, 0), ceil(constrain(mouseX/displayScale, 0, ParticleMap.w-1)), ceil(constrain(mouseY/displayScale, 0, ParticleMap.w-1)));
-    } 
-    else if (mouseButton == RIGHT) {
-      ParticleMap.createParticle(GAS, color(255, 0, 0), ceil(constrain(mouseX/displayScale, 0, ParticleMap.w-1)), ceil(constrain(mouseY/displayScale, 0, ParticleMap.w-1)));
-    } 
-    else if (mouseButton == CENTER) {
-      ParticleMap.createParticle(SOLID, color(0, 0, 255), ceil(constrain(mouseX/displayScale, 0, ParticleMap.w-1)), ceil(constrain(mouseY/displayScale, 0, ParticleMap.w-1)));
-    }
-  }
-  //fill(255);
-  //text(HashList.size(), 10, 30);
   particleList.clear();
   fill(255);
-  text(frameRate, 10, 15);
+  text(int(frameRate), 4, 15);
 }////////////////////////////////////////////////////////////////
 
 //           //
@@ -126,24 +114,24 @@ void initFlags() {
 // function: makeButton
 // Creates a new CP5 button.
 //
-void makeButton(String Name, float X, float Y, int Width, int Height, String Label) {
-  cp5.addButton(Name)
+Button makeButton(String Name, float X, float Y, int Width, int Height, String Label) {
+  return cp5.addButton(Name)
      .setValue(0)
      .setPosition(X, Y)
      .setSize(Width, Height)
      .setLabel(Label)
-     ;
+     .setSwitch(true);
 }
 
 //
 // function: makeElementButtons
-// 
+//
 void makeElementButtons(ArrayList<Element> list) {
   float currentX = 510;
   float currentY = 10;
   
   for(i = 0; i<list.size(); i++) {
-    makeButton(str(list.get(i).Number), currentX, currentY, 25, 25, list.get(i).Symbol);
+    buttons.add(makeButton(str(list.get(i).Number), currentX, currentY, 25, 25, list.get(i).Symbol));
     currentX+=35;
     if(currentX > 760) {
       currentX = 510;
@@ -152,3 +140,14 @@ void makeElementButtons(ArrayList<Element> list) {
   }
   
 }
+
+void createParticle(int x, int y, int number) {
+  if(number != 0) {
+    if(ParticleMap.isFree(x,y) == true) {
+      ParticleMap.createParticle(x, y, ElementData.get(number-1));
+    }
+  } else {
+    ParticleMap.removeParticle(x, y);
+  }
+}
+

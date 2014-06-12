@@ -1,0 +1,149 @@
+// comment <--
+//
+// Input Structure:
+// Number
+// Symbol
+// Density as a gas
+// Density as a Liquid
+// Density as a Solid
+// Melting Point (Kelvin)
+// Boiling Point (Kelvin)
+//
+// Notes:
+// Celsius to Kelvin is +274.2
+//
+// List of tags:
+// <Number>
+// <Symbol>
+// <DensityG>
+// <DensityL>
+// <DensityS>
+// <MeltingPoint>
+// <BoilingPoint>
+// 
+// 
+// Hydrogen //
+//
+<Number>1</Number>
+<Symbol>H</Symbol>
+<Color>FF99CCFF</Color>
+<DensityG></DensityG>
+<DensityL></DensityL>
+<DensityS></DensityS>
+<MeltingPoint>14</MeltingPoint>
+<BoilingPoint>20.3</BoilingPoint>
+<finish>
+//
+// Helium //
+//
+<Number>2</Number>
+<Symbol>He</Symbol>
+<Color>FFFF6600</Color>
+<DensityG></DensityG>
+<DensityL></DensityL>
+<DensityS></DensityS>
+<MeltingPoint>1.0</MeltingPoint>
+<BoilingPoint>4.2</BoilingPoint>
+<finish>
+//
+// Lithium
+//
+<Number>3</Number>
+<Symbol>Li</Symbol>
+<Color>FF1A1A14</Color>
+<DensityG></DensityG>
+<DensityL></DensityL>
+<DensityS></DensityS>
+<MeltingPoint>454</MeltingPoint>
+<BoilingPoint>1603</BoilingPoint>
+<finish>
+//
+// Beryllium
+//
+<Number>4</Number>
+<Symbol>Be</Symbol>
+<Color>FF354037</Color>
+<DensityG></DensityG>
+<DensityL></DensityL>
+<DensityS></DensityS>
+<MeltingPoint>1560</MeltingPoint>
+<BoilingPoint>3243</BoilingPoint>
+<finish>
+//
+// Boron
+//
+<Number>5</Number>
+<Symbol>B</Symbol>
+<Color>FF767676</Color>
+<DensityG></DensityG>
+<DensityL></DensityL>
+<DensityS></DensityS>
+<MeltingPoint>2349</MeltingPoint>
+<BoilingPoint>4200</BoilingPoint>
+<finish>
+//
+// Carbon
+//
+<Number>6</Number>
+<Symbol>C</Symbol>
+<Color>FF323232</Color>
+<DensityG></DensityG>
+<DensityL></DensityL>
+<DensityS></DensityS>
+<MeltingPoint>3823.2</MeltingPoint>
+<BoilingPoint>5100.2</BoilingPoint>
+<finish>
+//
+// Nitrogen
+//
+<Number>7</Number>
+<Symbol>N</Symbol>
+<Color>FF1BD100</Color>
+<DensityG></DensityG>
+<DensityL></DensityL>
+<DensityS></DensityS>
+<MeltingPoint>63.2</MeltingPoint>
+<BoilingPoint>77.4</BoilingPoint>
+<finish>
+//
+// Oxygen
+//
+<Number>8</Number>
+<Symbol>O</Symbol>
+<Color>FF7F76FF</Color>
+<DensityG></DensityG>
+<DensityL></DensityL>
+<DensityS></DensityS>
+<MeltingPoint>54.4</MeltingPoint>
+<BoilingPoint>90.2</BoilingPoint>
+<finish>
+//
+// Fluorine
+//
+<Number>9</Number>
+<Symbol>F</Symbol>
+<Color>FFFFED4B</Color>
+<DensityG></DensityG>
+<DensityL></DensityL>
+<DensityS></DensityS>
+<MeltingPoint>53.5</MeltingPoint>
+<BoilingPoint>85.0</BoilingPoint>
+<finish>
+//
+// Neon
+//
+<Number>10</Number>
+<Symbol>Ne</Symbol>
+<finish>
+//
+// Sodium
+//
+<Number>11</Number>
+<Symbol>Na</Symbol>
+<finish>
+//
+// Magnesium
+//
+<Number>12</Number>
+<Symbol>Mg</Symbol>
+<finish>

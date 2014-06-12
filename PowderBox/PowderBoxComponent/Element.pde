@@ -8,6 +8,7 @@ class Element {
   String Symbol;
   
   // Physical properties //
+  color Color;
   // Density//
   float Density_G;
   float Density_L;
@@ -21,6 +22,7 @@ class Element {
   
   Element(int _Number,
           String _Symbol,
+          color _Color,
           float _Density_G,
           float _Density_L,
           float _Density_S,
@@ -29,7 +31,9 @@ class Element {
           ) {
     Symbol = _Symbol;
     Number = _Number;
-    
+    Color = _Color;
+    MeltingPoint = _MeltingPoint;
+    BoilingPoint = _BoilingPoint;
   }
   
 }
