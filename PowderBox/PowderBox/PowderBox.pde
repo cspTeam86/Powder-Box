@@ -7,7 +7,7 @@ import controlP5.*;
 //
 color BC = #9D9CD1; // Background color: Very light blue
 
-int selectedElement = 4; // Element to be created when the mouse is pressed
+int selectedElement = 1; // Element to be created when the mouse is pressed
 
 ArrayList<Element> ElementData = new ArrayList<Element>();
 ArrayList<Button> buttons = new ArrayList<Button>();

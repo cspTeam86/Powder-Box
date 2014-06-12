@@ -1,10 +1,9 @@
 
 //
-// Class: Element
+// Class: Compound
 //
-class Element {
+class Compound {
   
-  int Number;
   String Symbol;
   
   // Physical properties //
@@ -20,8 +19,7 @@ class Element {
   float BoilingPoint;
   
   
-  Element(int _Number,
-          String _Symbol,
+  Compound(String _Symbol,
           color _Color,
           float _Density_G,
           float _Density_L,
@@ -30,7 +28,6 @@ class Element {
           float _BoilingPoint
           ) {
     Symbol = _Symbol;
-    Number = _Number;
     Color = _Color;
     MeltingPoint = _MeltingPoint;
     BoilingPoint = _BoilingPoint;
