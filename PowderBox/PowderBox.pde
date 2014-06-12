@@ -110,14 +110,16 @@ void draw() {
 // Interrupts //
 //            //
 
+/*
 // Interrupt: controlEvent
 // Grabs all of the events from the controllers of cp5 //
 // Currently just using it for grabbing the selected element //
 public void controlEvent(ControlEvent theEvent) {
   println("cp5 - " + theEvent.getController().getName());
   selectedElement = int(theEvent.getController().getName());
+  lastPressed = selectedElement;
 }
-
+*/
 /////////////////////////////////////////////////////////////////
 
 //           //
@@ -157,7 +159,7 @@ void makeElementButtons(ArrayList<Element> list) {
         break;
       }
     }
-    buttons.add(makeButton(str(list.get(i).Number), currentX, currentY, 25, 25, list.get(i).Symbol));
+    buttons.add(makeButton(str(i), currentX, currentY, 25, 25, list.get(i).Symbol));
     currentX+=35;
     if(currentX > 760) {
       currentX = 510;
