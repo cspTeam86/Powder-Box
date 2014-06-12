@@ -44,7 +44,8 @@ class Element {
           float _MeltingPoint,
           float _BoilingPoint,
           float _EntropyF,
-          float _EnthalpyF
+          float _EnthalpyF,
+          String _ElementsNeeded
           ) {
     
     
@@ -53,6 +54,7 @@ class Element {
       EnthalpyF = _EnthalpyF;
     }else {
       Number = 0;
+      ElementsNeeded = _ElementsNeeded;
     }
     
     Symbol = _Symbol;

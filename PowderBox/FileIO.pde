@@ -25,6 +25,7 @@ class fileIO {
     float BoilingPoint = 0;
     float EnthalpyF = 0;
     float EntropyF = 0;
+    String ElementsNeeded = "";
     
     while(true) { // readfile loop //
       
@@ -52,7 +53,8 @@ class fileIO {
                             MeltingPoint,
                             BoilingPoint,
                             EnthalpyF,
-                            EntropyF
+                            EntropyF,
+                            ElementsNeeded
                             ));
           Number = 0;
           Symbol = "";
@@ -79,7 +81,7 @@ class fileIO {
           // Color //
           tag = findTag(line, "Color");
           if(tag != null) {
-            Color = unhex(tag);
+            Color = color(int(tag));
           }
           // Boiling Point //
           tag = findTag(line, "BoilingPoint");
@@ -96,6 +98,22 @@ class fileIO {
           // Density as a Liquid //
           
           // Density as a Solid //
+          
+          // Entropy of formation //
+          tag = findTag(line, "EntropyF");
+          if(tag != null) {
+            MeltingPoint = float(tag);
+          }
+          // Enthalpy of formation //
+          tag = findTag(line, "EnthalpyF");
+          if(tag != null) {
+            MeltingPoint = float(tag);
+          }
+          // Needed Elements //
+          tag = findTag(line, "NeededElements");
+          if(tag != null) {
+            MeltingPoint = float(tag);
+          }
         }
       }
     }

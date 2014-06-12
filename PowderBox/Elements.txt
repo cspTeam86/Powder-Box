@@ -23,7 +23,9 @@
 // <DensityS>
 // <MeltingPoint>
 // <BoilingPoint>
-// 
+// <EntropyF>
+// <EnthalpyF>
+// <NeededElements>
 // 
 // Hydrogen //
 //
@@ -155,5 +157,9 @@
 //            //
 //--------------
 //
-// Di-hydrogen
+// Di-Hydrogen
 //
+<Element>false</Element>
+<Symbol>H2</Symbol>
+<Color>#FE00FF</Color>
+<MeltingPoint>

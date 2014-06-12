@@ -1,6 +1,8 @@
 
 class reactions {
   
+  ArrayList<Element> Compounds;
+  
   String reaction(float T, ArrayList<Element> _Elements) {
     String r = "";
     
@@ -16,6 +18,8 @@ class reactions {
     return r;
   }
   
-  
+  void findCompounds() {
+    
+  }
   
 }

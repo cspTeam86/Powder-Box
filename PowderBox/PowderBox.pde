@@ -43,6 +43,13 @@ void setup() {
   ElementData = FIO.getElementList("Elements.txt");
   makeElementButtons(ElementData);
   
+  // CP5 stuff //
+  
+  cp5.addSlider("TemperatureSlider")
+    .setPosition(600, 400)
+    .setRange(0, 6203)
+    ;
+  
   // Andrew Setup //
   initFlags();
   ParticleMap = new Map(125, 125);
