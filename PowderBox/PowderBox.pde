@@ -18,7 +18,6 @@ int j = 0;
 
 ControlP5 cp5;
 fileIO FIO = new fileIO();
-Slider tempSlider;
 
 //
 // Andrew Global Variables //
@@ -26,7 +25,6 @@ Slider tempSlider;
 Map ParticleMap;
 IntList HashList;
 ArrayList<Particle> particleList;
-float globalTemp = 0;
 
 public int displayScale = 4;
 
@@ -46,11 +44,12 @@ void setup() {
   makeElementButtons(ElementData);
   
   // CP5 stuff //
-  tempSlider = cp5.addSlider("Global Temperature")
-    .setPosition(564, 450)
+  
+  cp5.addSlider("TemperatureSlider")
+    .setPosition(600, 400)
     .setRange(0, 6203)
     ;
-    
+  
   // Andrew Setup //
   initFlags();
   ParticleMap = new Map(125, 125);
@@ -63,7 +62,6 @@ void setup() {
 // Function: draw
 //
 void draw() {
-  globalTemp = tempSlider.getValue();
   // Daylan Draw //
   background(BC);
   fill(0);

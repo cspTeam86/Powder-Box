@@ -19,6 +19,7 @@ public class Particle {
     this.number = element.Number;
     this.MeltingPoint = element.MeltingPoint;
     this.BoilingPoint = element.BoilingPoint;
+    this.temp = 294;
     this.state = LIQUID;
   }
 
@@ -27,10 +28,10 @@ public class Particle {
   public void update() {
     oldX = this.x;
     oldY = this.y;
-    if (globalTemp >= this.BoilingPoint) {
+    if (this.temp >= this.BoilingPoint) {
       this.state = GAS;
     } 
-    else if (globalTemp >= this.MeltingPoint) {
+    else if (this.temp >= this.MeltingPoint) {
       this.state = LIQUID;
     } 
     else {
