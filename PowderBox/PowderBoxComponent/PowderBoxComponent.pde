@@ -99,6 +99,20 @@ void draw() {
   text(int(frameRate), 4, 15);
 }////////////////////////////////////////////////////////////////
 
+//            //
+// Interrupts //
+//            //
+
+// Interrupt: controlEvent
+// Grabs all of the events from the controllers of cp5 //
+// Currently just using it for grabbing the selected element //
+public void controlEvent(ControlEvent theEvent) {
+  println("cp5 - " + theEvent.getController().getName());
+  selectedElement = int(theEvent.getController().getName());
+}
+
+/////////////////////////////////////////////////////////////////
+
 //           //
 // FUNCTIONS //
 //           //
@@ -141,6 +155,9 @@ void makeElementButtons(ArrayList<Element> list) {
   
 }
 
+//
+// function: createParticle
+//
 void createParticle(int x, int y, int number) {
   if(number != 0) {
     if(ParticleMap.isFree(x,y) == true) {
@@ -150,4 +167,3 @@ void createParticle(int x, int y, int number) {
     ParticleMap.removeParticle(x, y);
   }
 }
-
