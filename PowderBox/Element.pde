@@ -56,7 +56,7 @@ class Element {
       Number = 0;
       ElementsNeeded = _ElementsNeeded;
     }
-    
+    println("Hit this line");
     Symbol = _Symbol;
     Number = _Number;
     Color = _Color;
