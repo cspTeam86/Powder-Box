@@ -156,10 +156,3 @@
 // Compounds! //
 //            //
 //--------------
-//
-// Di-Hydrogen
-//
-<Element>false</Element>
-<Symbol>H2</Symbol>
-<Color>#FE00FF</Color>
-<MeltingPoint>
